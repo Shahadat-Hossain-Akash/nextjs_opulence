@@ -1,12 +1,12 @@
-import Image from "next/image";
+import Header from "@/components/Header";
+import Transaction from "@/components/Transaction";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between p-2">
+    <main className="flex min-h-screen flex-col justify-between">
       <section>
-        <div className="w-full h-full ">
-          <span className="text-4xl md:text-8xl ">Opulence</span>
-        </div>
+        <Header/>
+        <Transaction/>
       </section>
     </main>
   );
