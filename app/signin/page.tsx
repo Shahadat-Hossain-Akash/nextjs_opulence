@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function SignInPage() {
   return (
-    <div className='h-screen w-full'>
+    <div className='h-screen w-full bg-[#1a1a1a]'>
         <Login/>
     </div>
   )

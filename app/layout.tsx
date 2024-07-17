@@ -1,8 +1,8 @@
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {Navbar} from "@/components/Navbar";
-import {Providers} from "./providers";
+import { Navbar } from "@/components/Navbar";
+import { Providers } from "./providers";
 
 const nb = localFont({
     src: [
@@ -19,15 +19,14 @@ export const metadata: Metadata = {
     description: "Keep track of your expenses"
 };
 
-export default function RootLayout({children} : Readonly < {
+export default function RootLayout({ children }: Readonly<{
     children: React.ReactNode;
-} >) 
-{
+}>) {
     return (
         <html lang="en" className="dark">
-            <body className={`${nb.variable} font-sans p-2`}>
+            <body className={`${nb.variable} font-sans`}>
                 <Providers>
-                    <Navbar/> {children}
+                    {children}
                 </Providers>
             </body>
         </html>

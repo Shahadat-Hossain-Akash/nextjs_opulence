@@ -4,9 +4,8 @@ import { List } from './List'
 
 export default function Transaction() {
   return (
-    <div>
+    <div className=''>
       <Balance/>
-      <List/>
     </div>
   )
 }

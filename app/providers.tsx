@@ -1,11 +1,15 @@
 'use client'
 
-import {NextUIProvider} from '@nextui-org/react'
+import { store } from '../redux/store'
+import { NextUIProvider } from '@nextui-org/react'
+import { Provider } from 'react-redux'
 
-export function Providers({children}: Readonly<{ children: React.ReactNode }>) {
+export function Providers({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <NextUIProvider>
-      {children}
-    </NextUIProvider>
+    <Provider store={store}>
+      <NextUIProvider>
+        {children}
+      </NextUIProvider>
+    </Provider>
   )
 }

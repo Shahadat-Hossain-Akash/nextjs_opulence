@@ -39,42 +39,21 @@ export default function Register() {
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-    <form onSubmit={handleSubmit} className="max-w-3xl w-full flex gap-4 flex-col bg-zinc-700/05 px-6 py-8 rounded-3xl backdrop-blur-md border-[1px] border-zinc-900/30 bg-custom-modal">
-    <span className="text-5xl mb-2">Register Now</span>
-      <Input
-        type="text"
-        value={register.username}
-        name="username"
-        onChange={handleChange}
-        required
-        placeholder="username"
-        label="Name"
-        labelPlacement="outside"
-        variant="underlined"
-      />
-      <Input
-        type="email"
-        value={register.email}
-        name="email"
-        onChange={handleChange}
-        required
-        placeholder="email"
-        label="Email"
-        labelPlacement="outside"
-        variant="underlined"
-      />
-      <Input
-        type="password"
-        value={register.password}
-        name="password"
-        onChange={handleChange}
-        required
-        placeholder="password"
-        label="Password"
-        labelPlacement="outside"
-        variant="underlined"
-      />
-      <Button type="submit" className=" mt-2" variant="shadow" color="primary">submit</Button>
+    <form onSubmit={handleSubmit} className="max-w-3xl w-full flex gap-3 flex-col bg-[#1c1c1c] px-6 py-8 rounded-3xl backdrop-blur-md border-[1px] border-zinc-900/30">
+      <span className="text-3xl mb-2">Create your account</span>
+      <div className="flex flex-col w-full gap-2">
+        <label htmlFor="username" className="text-sm">Username</label>
+        <input className="py-3 px-2 rounded-lg bg-[#1a1a1a] outline-none placeholder-white/90" type="text" name="username" placeholder="Enter your username" />
+      </div>
+      <div className="flex flex-col w-full gap-2">
+        <label htmlFor="email" className="text-sm">Email<sup className="ml-1">✱</sup></label>
+        <input className="py-3 px-2 rounded-lg bg-[#1a1a1a] outline-none placeholder-white/90" type="email" name="email" placeholder="Enter your email" />
+      </div>
+      <div className="flex flex-col w-full gap-2">
+        <label htmlFor="password" className="text-sm">Password<sup className="ml-1">✱</sup></label>
+        <input className="py-3 px-2 rounded-lg bg-[#1a1a1a] outline-none placeholder-white/90" type="password" name="password" placeholder="Enter your password" />
+      </div>
+      <button type="submit" className=" bg-[#0096EA] rounded-lg p-3 outline-none w-full">submit</button>
     </form>
     </div>
   );
